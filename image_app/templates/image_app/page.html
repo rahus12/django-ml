@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Alphabet Image</title>
+	<link href = "./static/css/style.css" type = "text/css" rel = "stylesheet"> 
+</head>
+
+<body>
+	<div class = top>
+		<h2>MNIST Model</h2>
+		<br>
+	</div>
+	
+	<div class= images>
+		<h3>Built using:</h3>
+
+		<div class = col>
+		<img src = "static/images/django-logo-negative.png" > 
+		</div>
+
+	    <div class = col>
+		<img src = "static/images/logo-k-keras-wb.png" >
+		</div> 
+
+		<div class = col>
+		<img src = "static/images/python.png" >
+		</div>
+
+		<div class = col>
+		<img src = "static/images/css html.png" >
+		</div>
+
+	</div>
+	  
+	<div class= bkground>
+	<div class = upload>
+		<h4> Upload image here:</h4>
+		<form method = "POST" enctype="multipart/form-data">
+			{% csrf_token %}		
+			<p><label for="id_Alphabet_img"></label> 
+				
+				<input type="file" name="Alphabet_img" accept="image/*" required id="id_Alphabet_img"></p>
+
+			<button type="submit">Upload</button>	
+		</form><br>
+	</div>
+</div>
+<br>
+
+	<div class="ans">
+		<h3> <!-- <img src = {{form.img}}> --> The number is: <br><strong>{{form.number}}</strong></h3><img src = {{form.img}}>
+	</div>
+		
+</body>
+</html>
